@@ -1,57 +1,140 @@
 :root {
   --color-blue1: rgb(71, 94, 108);
   --color-blue2: rgb(20, 27, 31);
-  --color-primary: rgb(0,170,162);
+  --color-primary: rgb(0, 170, 162);
   --font-color: rgb(41, 52, 57);
   --color-gradient: linear-gradient(to right, var(--color-blue1), 20%, var(--color-blue2));
+
 }
 
 body {
-  background: var(--color-gradient);
+  background: white;
+  color: var(--color-primary);
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: Roboto;
+  margin: 0px;
+  min-height: 100vh;
+}
+
+/* GLOBAL */
+a {
+  color: var(--color-blue2);
+}
+
+a:hover, a:hover svg {
   color: var(--color-primary);
 }
+/* NAVIGATION */
+nav {
+  background: var(--color-gradient);
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
 
-/* existing code */
+nav img {
+  margin-right: auto;
+}
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+nav a {
+  height: 24px;
+  padding-inline-start: 16px;
+}
+nav a .css-zza0ns-MuiBadge-badge{
+  background-color: var(--color-primary);
+}
+
+nav svg {
+  color: lightgrey;
+}
+
+/* MAIN AREA */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+}
+
+a:has(.DashboardCard) {
+  box-sizing: border-box;
+  display: block;
+  text-decoration-line: none;
+  color: var(--color-blue2);
+  font-size: 16px;
+  font-weight: 500;
+  /* width: 50%; */
+  flex: 50%;
+  max-width: 400px;
+  padding-block-end: 20px;
+}
+
+
+a:has(.DashboardCard):nth-child(odd) {
+  padding-inline-end: 10px;
+}
+a:has(.DashboardCard):nth-child(even) {
+  padding-inline-start: 10px;
+}
+
+@media (min-width: 1024px) {
+  a:has(.DashboardCard){
+    padding-inline: 10px;
+  }
+}
+
+
+
+.DashboardCard {
+  box-sizing: border-box;
+  background-color: rgba(211, 211, 211, 0.2);
+  border-radius: 24px;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 20px;
+}
+
+.DashboardCard>div {
   text-align: center;
+  align-content: center;
+
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}red
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.DashboardCard svg {
+  font-size: 48px;
+  color: var(--color-blue1);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* FOOTER */
+footer {
+  box-sizing: border-box;
+  background-color: var(--color-primary);
+
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+footer a {
+  /* dit werkt goed als je alleen op het icoon klikt */
+  /* align-self: center;
+  margin: auto; */
 
-.card {
-  padding: 2em;
+  /* dit is voor de hele area, kijken wat gewenst is */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white !important;
+  opacity: 0.6;
 }
-
-.read-the-docs {
-  color: #888;
+footer a:hover, footer a:hover svg {
+  color:white;
+  opacity: 1;
 }
