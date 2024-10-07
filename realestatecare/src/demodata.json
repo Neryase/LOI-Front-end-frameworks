@@ -1,0 +1,71 @@
+[
+  {
+    "taskId": "12345",
+    "address": "kerkstraat 5",
+    "postalCode": "1234AA",
+    "city": "amsterdam",
+    "taskObjectives": [
+      {
+        "taskObjective": "Schade opnemen",
+        "locatie": "keuken",
+        "newDamage": "yes",
+        "damageType": "Normaal gebruik",
+        "date": "15-09-2022",
+        "actionRequired": "yes",
+        "images": [
+          {
+            "image": "test.jpg"
+          }
+        ],
+        "description": "Waarschijnlijk iets gevallen op de kookplaat"
+      },
+      {
+        "taskObjective": "Achterstallig onderhoud",
+        "locatie": "Woonkamer",
+        "maintenanceType": "windows",
+        "actionRequired": "yes",
+        "images": [],
+        "costIndication": "0-500"
+      }
+    ]
+  },
+  {
+    "taskId": "67890",
+    "address": "kerkstraat 10",
+    "postalCode": "1234AA",
+    "city": "amsterdam",
+    "taskObjectives": [
+      {
+        "taskObjective": "Technische installaties",
+        "locatie": "Zolder",
+        "installationType": "airRefreshing",
+        "malfunction": "code 1530",
+        "testProcedure": "test.pdf",
+        "approved": "yes",
+        "images": [
+          {
+            "image": "test.jpg"
+          },
+          {
+            "image": "test2.jpg"
+          }
+        ],
+        "description": "Waarschijnlijk iets gevallen op de kookplaat",
+      },
+      {
+        "taskObjective": "Modificaties inventariseren",
+        "locatie": "Keuken",
+        "documentedModifications": "documentation.pdf", /* how it was before */
+        "madeBy": "tenant",
+        "descriptionModification": "Extra stopcontact aangelegd",
+        "action": "have it inspected",
+        "images": [
+          {
+            "image": "test.jpg"
+          }
+        ],
+        "description": "laten we dit voor de zekerheid even nakijken"
+      }
+    ]
+  }
+]

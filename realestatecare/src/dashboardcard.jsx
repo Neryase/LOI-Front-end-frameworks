@@ -1,7 +1,6 @@
 import EventNoteOutlinedIcon from '@mui/icons-material/EventNoteOutlined';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
 import StorageOutlinedIcon from '@mui/icons-material/StorageOutlined';
-import SettingsIcon from '@mui/icons-material/SettingsRounded';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 
 export default function DashboardCard({url, icon}) {
