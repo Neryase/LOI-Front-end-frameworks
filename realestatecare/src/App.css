@@ -3,8 +3,12 @@
   --color-blue2: rgb(20, 27, 31);
   --color-primary: rgb(0, 170, 162);
   --font-color: rgb(41, 52, 57);
-  --color-gradient: linear-gradient(to right, var(--color-blue1), 20%, var(--color-blue2));
-
+  --color-gradient: linear-gradient(
+    to right,
+    var(--color-blue1),
+    20%,
+    var(--color-blue2)
+  );
 }
 
 body {
@@ -21,7 +25,8 @@ a {
   color: var(--color-blue2);
 }
 
-a:hover, a:hover svg {
+a:hover,
+a:hover svg {
   color: var(--color-primary);
 }
 /* NAVIGATION */
@@ -32,20 +37,17 @@ nav {
   padding: 10px 20px;
 }
 
-nav img {
+nav a:has(img) {
   margin-right: auto;
 }
 
-nav a {
-  height: 24px;
-  padding-inline-start: 16px;
-}
-nav a .css-zza0ns-MuiBadge-badge{
+nav a .css-zza0ns-MuiBadge-badge {
   background-color: var(--color-primary);
 }
 
 nav svg {
   color: lightgrey;
+  padding-inline-start: 16px;
 }
 
 /* MAIN AREA */
@@ -69,7 +71,6 @@ a:has(.DashboardCard) {
   padding-block-end: 20px;
 }
 
-
 a:has(.DashboardCard):nth-child(odd) {
   padding-inline-end: 10px;
 }
@@ -78,12 +79,10 @@ a:has(.DashboardCard):nth-child(even) {
 }
 
 @media (min-width: 1024px) {
-  a:has(.DashboardCard){
+  a:has(.DashboardCard) {
     padding-inline: 10px;
   }
 }
-
-
 
 .DashboardCard {
   box-sizing: border-box;
@@ -96,17 +95,15 @@ a:has(.DashboardCard):nth-child(even) {
   padding: 20px;
 }
 
-.DashboardCard>div {
+.DashboardCard > div {
   text-align: center;
   align-content: center;
-
 }
 
 .DashboardCard svg {
   font-size: 48px;
   color: var(--color-blue1);
 }
-
 
 /* FOOTER */
 footer {
@@ -134,7 +131,14 @@ footer a {
   color: white !important;
   opacity: 0.6;
 }
-footer a:hover, footer a:hover svg {
-  color:white;
+footer a:hover,
+footer a:hover svg {
+  color: white;
   opacity: 1;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+  gap: 1rem;
 }
