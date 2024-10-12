@@ -18,54 +18,32 @@ export default function OpenTask({ task }) {
     <Grid2 size={4}>
       <Card>
         <CardContent>
-          <Stack spacing={2}>
+          <Stack spacing={4}>
             <h3>{task.type}</h3>
-            <FormLabel id="demo-radio-buttons-group-label">
-              Action required?
-            </FormLabel>
-            <RadioGroup
-              row
-              aria-labelledby="demo-radio-buttons-group-label"
-              defaultValue={task.actionRequired}
-              name="radio-buttons-group"
-              disabled
-            >
-              <FormControlLabel
-                value="yes"
-                control={<Radio disabled />}
-                label="Yes"
-              />
-              <FormControlLabel
-                value="no"
-                control={<Radio disabled />}
-                label="No"
-              />
-            </RadioGroup>
+            <Stack spacing={1}>
+              <span class="field-title">Action required?</span>
+              <span>Yes</span>
+            </Stack>
+          
+            <Stack spacing={1}>
+              <span class="field-title">Reported by</span>
+              <span>{task.reportedBy}</span>
+            </Stack>
 
-            <TextField
-              id="standard-basic"
-              label="Reported by"
-              disabled
-              defaultValue={task.reportedBy || "Tenant"}
-            />
+            <Stack spacing={1}>
+              <span class="field-title">Location</span>
+              <span>{task.location}</span>
+            </Stack>
 
-            <TextField
-              id="standard-basic"
-              label="Location"
-              variant="standard"
-              disabled
-              defaultValue={task.location}
-            />
+            <Stack spacing={1}>
+              <span class="field-title">Date</span>
+              <span>{new Date(task.date).toLocaleDateString()}</span>
+            </Stack>
 
-            <TextField
-              id="standard-basic"
-              variant="standard"
-              type="datetime-local"
-              disabled
-              defaultValue={task.date}
-            />
-
-            <TextareaAutosize minRows={5} defaultValue={task.description} />
+            <Stack spacing={1}>
+              <span class="field-title">Description</span>
+              <p>{task.description}</p>
+            </Stack>  
           </Stack>
         </CardContent>
       </Card>
