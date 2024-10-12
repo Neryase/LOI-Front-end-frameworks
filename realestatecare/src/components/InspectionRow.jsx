@@ -1,6 +1,6 @@
 import { Card, CardContent, Grid2, Link, Stack } from "@mui/material";
 import PropTypes from "prop-types";
-import { Inspection } from "../models/Inspection";
+import { Inspection } from "../models/inspection.model";
 
 export default function InspectionRow({ inspection }) {
   return (

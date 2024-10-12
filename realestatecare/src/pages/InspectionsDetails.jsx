@@ -1,19 +1,22 @@
 import { Stack } from "@mui/material";
 import { useParams } from "react-router-dom";
-import data from "../assets/db.json";
 import OpenTask from "../components/OpenTask";
-import { Task } from "../models/Task";
-import { Inspection } from "../models/Inspection";
+import { useServiceHook } from "../services/serviceHook";
+import { InspectionService } from "../services/inspection.service";
+import { TaskService } from "../services/task.service";
 
 export default function InspectionsDetails() {
   const { id } = useParams();
 
-  const inspection = new Inspection(
-    data.inspections.find((d) => d.taskId === id),
+  const [inspection, iLoading] = useServiceHook(
+    async () => await new InspectionService().getById(id),
   );
-  const tasks = data.tasks
-    .filter((t) => t.inspectionId === id)
-    .map((t) => new Task(t));
+
+  const [tasks, tLoading] = useServiceHook(
+    async () => await new TaskService().getAllTasksForInspection(id),
+  );
+
+  if (iLoading || tLoading) return <h1>Loading...</h1>;
 
   return (
     <Stack spacing={4} style={{ width: "100%" }}>

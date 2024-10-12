@@ -11,7 +11,7 @@ import {
   TextField,
 } from "@mui/material";
 import PropTypes from "prop-types";
-import { Task } from "../models/Task";
+import { Task } from "../models/task.model";
 
 export default function OpenTask({ task }) {
   return (
