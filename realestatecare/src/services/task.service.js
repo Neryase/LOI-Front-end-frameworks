@@ -4,7 +4,7 @@ import { Service } from "./service";
 export class TaskService extends Service {
   constructor() {
     super(
-      "http://my-json-server.typicode.com/Neryase/LOI-Front-end-frameworks/tasks",
+      "https://my-json-server.typicode.com/Neryase/LOI-Front-end-frameworks/tasks",
       Task,
     );
   }
