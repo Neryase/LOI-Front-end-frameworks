@@ -1,22 +1,19 @@
 import { Stack } from "@mui/material";
 import { useParams } from "react-router-dom";
-import OpenTask from "../components/OpenTask";
-import { useServiceHook } from "../services/serviceHook";
-import { InspectionService } from "../services/inspection.service";
-import { TaskService } from "../services/task.service";
+import { useInspectionStore } from "../stores/useInspectionStore";
+import { useGetObjectivesForInspection } from "../stores/useObjectiveStore";
 
 export default function InspectionsDetails() {
   const { id } = useParams();
-
-  const [inspection, iLoading] = useServiceHook(
-    async () => await new InspectionService().getById(id),
+  const inspection = useInspectionStore((state) =>
+    state.inspections.find((i) => i.id === id),
   );
 
-  const [tasks, tLoading] = useServiceHook(
-    async () => await new TaskService().getAllTasksForInspection(id),
-  );
+  const [objectives, loading] = useGetObjectivesForInspection(id);
 
-  if (iLoading || tLoading) return <h1>Loading...</h1>;
+  if (loading) return <h1>Loading...</h1>;
+
+  console.log(objectives);
 
   return (
     <Stack spacing={4} style={{ width: "100%" }}>
@@ -29,12 +26,6 @@ export default function InspectionsDetails() {
           {inspection?.postalCode} {inspection?.city}
         </span>
       </Stack>
-      <h2>Open tasks (#{tasks.length})</h2>
-      <div className="tiles">
-        {tasks.map((t, i) => (
-          <OpenTask key={i} task={t} />
-        ))}
-      </div>
     </Stack>
   );
 }

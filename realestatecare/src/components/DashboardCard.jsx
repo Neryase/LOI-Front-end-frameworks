@@ -3,14 +3,15 @@ import CheckCircleOutlineOutlinedIcon from "@mui/icons-material/CheckCircleOutli
 import StorageOutlinedIcon from "@mui/icons-material/StorageOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export default function DashboardCard({ url, icon }) {
   return (
-    <a href={url}>
+    <Link to={url}>
       <div className="DashboardCard">
         <CardIcon icon={icon} />
       </div>
-    </a>
+    </Link>
   );
 }
 

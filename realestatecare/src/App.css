@@ -58,6 +58,11 @@ main {
   justify-content: center;
 }
 
+body:has(main[data-darkmode="true"]) {
+  background: black;
+  color: white;
+}
+
 a:has(.DashboardCard) {
   box-sizing: border-box;
   display: block;
@@ -69,6 +74,11 @@ a:has(.DashboardCard) {
   flex: 50%;
   max-width: 400px;
   padding-block-end: 20px;
+}
+
+main[data-darkmode="true"] .DashboardCard {
+  background: var(--color-blue2);
+  color: white;
 }
 
 a:has(.DashboardCard):nth-child(odd) {

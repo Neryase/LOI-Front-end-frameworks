@@ -2,84 +2,89 @@
   "inspections": [
     {
       "id": "12345",
+      "type": "damage",
+      "status": "planned",
+      "address": "kerkstraat 5",
+      "postalCode": "1234AA",
+      "city": "amsterdam"
+    },
+    {
+      "id": "12346",
+      "type": "damage",
+      "status": "finished",
+      "address": "kerkstraat 5",
+      "postalCode": "1234AA",
+      "city": "amsterdam"
+    },
+    {
+      "id": "12347",
+      "type": "damage",
+      "status": "finished",
+      "address": "kerkstraat 5",
+      "postalCode": "1234AA",
+      "city": "amsterdam"
+    },
+    {
+      "id": "12348",
+      "type": "damage",
+      "status": "finished",
       "address": "kerkstraat 5",
       "postalCode": "1234AA",
       "city": "amsterdam"
     },
     {
       "id": "67890",
+      "type": "modification",
+      "status": "planned",
       "address": "kerkstraat 10",
       "postalCode": "1234AA",
       "city": "amsterdam"
     },
     {
       "id": "23456",
+      "type": "damage",
+      "status": "planned",
       "address": "kerkstraat 15",
       "postalCode": "1234AA",
       "city": "amsterdam"
     },
     {
       "id": "45678",
+      "type": "installation",
+      "status": "planned",
       "address": "kerkstraat 20",
       "postalCode": "1234AA",
       "city": "amsterdam"
     },
     {
       "id": "56789",
+      "type": "maintenance",
+      "status": "planned",
       "address": "kerkstraat 25",
       "postalCode": "1234AA",
       "city": "amsterdam"
     }
   ],
-  "tasks": [
+  "objectives": [
     {
-      "id": "1",
-      "inspectionId": "12345",
       "type": "damage",
-      "location": "Kitchen",
-      "date": "2022-01-01T00:00:00.000Z",
-      "reportedBy": "tenant",
-      "actionRequired": "yes",
-      "description": "Waarschijnlijk iets gevallen op de kookplaat",
-      "newDamage": "yes",
-      "damageType": "Normaal gebruik"
+      "inspectionId": "12345"
     },
     {
-      "id": "2",
-      "inspectionId": "12345",
-      "type": "maintenance",
-      "location": "Living room",
-      "date": "2022-01-01T00:00:00.000Z",
-      "reportedBy": "tenant",
-      "actionRequired": "yes",
-      "description": "Waarschijnlijk iets gevallen op de kookplaat",
-      "maintenanceType": "windows",
-      "costIndication": "0-500"
+      "type": "damage",
+      "inspectionId": "12346"
     },
     {
-      "id": "3",
-      "inspectionId": "45678",
-      "type": "installations",
-      "location": "Attic",
-      "date": "2022-01-01T00:00:00.000Z",
-      "reportedBy": "tenant",
-      "actionRequired": "yes",
-      "description": "Waarschijnlijk iets gevallen op de kookplaat",
-      "installationType": "airRefreshing",
-      "malfunction": "code 1530",
-      "testProcedure": "test.pdf"
+      "type": "damage",
+      "inspectionId": "12347"
     },
     {
-      "id": "4",
-      "inspectionId": "67890",
-      "type": "modifications",
-      "location": "Kitchen",
-      "date": "2022-01-01T00:00:00.000Z",
-      "reportedBy": "tenant",
-      "actionRequired": "yes",
-      "description": "Waarschijnlijk iets gevallen op de kookplaat",
-      "documentedModifications": "documentation.pdf",
-      "madeBy": "tenant"
+      "type": "damage",
+      "inspectionId": "12347"
+    },
+    {
+      "type": "damage",
+      "inspectionId": "12348"
     }
   ]
 }

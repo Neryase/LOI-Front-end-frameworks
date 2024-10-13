@@ -1,15 +1,4 @@
-import {
-  Card,
-  CardContent,
-  FormControlLabel,
-  FormLabel,
-  Grid2,
-  Radio,
-  RadioGroup,
-  Stack,
-  TextareaAutosize,
-  TextField,
-} from "@mui/material";
+import { Card, CardContent, Grid2, Stack } from "@mui/material";
 import PropTypes from "prop-types";
 import { Task } from "../models/task.model";
 
@@ -21,29 +10,29 @@ export default function OpenTask({ task }) {
           <Stack spacing={4}>
             <h3>{task.type}</h3>
             <Stack spacing={1}>
-              <span class="field-title">Action required?</span>
+              <span className="field-title">Action required?</span>
               <span>Yes</span>
             </Stack>
-          
+
             <Stack spacing={1}>
-              <span class="field-title">Reported by</span>
+              <span className="field-title">Reported by</span>
               <span>{task.reportedBy}</span>
             </Stack>
 
             <Stack spacing={1}>
-              <span class="field-title">Location</span>
+              <span className="field-title">Location</span>
               <span>{task.location}</span>
             </Stack>
 
             <Stack spacing={1}>
-              <span class="field-title">Date</span>
+              <span className="field-title">Date</span>
               <span>{new Date(task.date).toLocaleDateString()}</span>
             </Stack>
 
             <Stack spacing={1}>
-              <span class="field-title">Description</span>
+              <span className="field-title">Description</span>
               <p>{task.description}</p>
-            </Stack>  
+            </Stack>
           </Stack>
         </CardContent>
       </Card>
