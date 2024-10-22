@@ -32,6 +32,7 @@ export default function InspectionsDetails() {
       <Link to={inspection.status === "finished" ? "/finished" : "/planned"}>
         Back to overview
       </Link>
+      <Stack spacing={2}>
       <Stack
         direction={"row"}
         spacing={4}
@@ -46,7 +47,9 @@ export default function InspectionsDetails() {
           label={inspection?.status}
           color={inspection?.status === "finished" ? "success" : "primary"}
         />
-        {inspection?.status !== "finished" && (
+        
+      </Stack>
+      {inspection?.status !== "finished" && (
           <Button
             onClick={() => closeInspection(inspection?.id)}
             disabled={iLoading}
