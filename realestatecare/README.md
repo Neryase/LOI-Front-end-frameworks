@@ -35,30 +35,30 @@ Ten opzichten van de laatste Feedback opdracht is de structuur lichtelijk verand
 
 De volgende functionaliteiten zijn beschikbaar in de demo van de app.
 
-**Authenticatie**
+#### Authenticatie
 Het is mogelijk voor een gebruiker om in te loggen. Dit is wel "gemockt". Dat houdt in dat je elk willekeurig emailadres en wachtwoord kan invullen om in te loggen. Ook zit er een mock van 2 factor authenticatie in. Na het inloggen met een emailadres en wachtwoord moet er een code ingevoerd worden. Elk willekeurige code voldoet. Voor de implementatie wordt gebruik gemaakt van o.a. `localStorage`. Hierin worden de ingevoerde gegevens opgeslagen.
 
 Alle "routes" zijn ook afgeschermd. Wanneer je een route direct bezoekt waar je niet mag komen (omdat je niet ingelogd bent) wordt je naar de login pagina gestuurd. De implementie hiervan zit in `components/PrivateRoute.jsx`.
 
-**Dashboard**
+#### Dashboard
 Het dashboard is geimplementeerd volgens de case in de aangegeven huisstijl. Dit is de pagina waar je op terecht komt na het inloggen. Vanuit deze pagina zijn er 4 andere paginas te bezoeken. Namelijk de vier grote velden die je op het dashboard ziet.
 
-**Settings**
+#### Settings
 Er zijn een paar settings beschikbaar in de demo app. De meeste settings werken echter niet, en zijn voor sier. Een paar kleine dingen werken wel:
 
 - Je ziet op dit scherm terug het emailadres wat je hebt gebruikt om in te loggen.
 - Je kan hier uitloggen. Hiermee wordt de `localStorage` leeggemaakt en kun je afgeschermde routes niet meer bezoeken.
 - Je kan dark mode aanzetten. Dit zorgt voor een simpele donkere weergave door de gehele app.
 
-**Knowledge base**
+#### Knowledge base
 Dit is een pagina met een simpele lijst van links naar andere paginas toe. Dit zijn allemaal mock links die niet corresponderen met de de tekst van de link.
 
-**Inspecties**
+#### Inspecties
 Via het dashboard zijn er 2 overzichten aan inspecties beschikbaar: geplande inspecties en afgeronde inspecties. In beide gevallen wordt er een correct gefilterde lijst aan inspecties opgehaald vanuit MyJSONServer. De resultaten worden in de "InspectionStore" opgeslagen (zie `stores/useInspectionStore`). Hierdoor zijn alle inspecties beschikbaar zonder nog een keer data van MyJSONServer te halen.
 
 De lijst van gefilderde inspecties worden als klikbare kaarten op het scherm getoond.
 
-**Inspectie details**
+#### Inspectie details
 Bij het klikken op een inspectie kaart, opent een pagina met inspectie details. De meeste functionaliteiten zitten in deze pagina verwerkt. De details van de inspectie zelf worden via `store/useInspectionStore` opgehaald. Want daar zijn ze al opgeslagen. Wel worden de inspectie objectives behorende bij deze inspectie opgehaald op MyJSONServer, en opgeslagen in de ObjectiveStore `store/useObjectiveStore`.
 
 Elke objective is klikbaar. Hiermee komt er een dialog waarmee de details van de objective aangepast kunnen worden. Wanneer dit gebeurd worden de nieuwe waardes van de objective naar MyJSONServer gestuurd, en wordt de bijbehorende objective in de ObjectiveStore geupdate. Niet alle informatie is beschikbaar om aan te passen.
