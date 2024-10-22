@@ -1,8 +1,9 @@
-import { Card, CardContent, Grid2, Link, Stack } from "@mui/material";
+import { Card, CardContent, Grid2, Stack } from "@mui/material";
 import PropTypes from "prop-types";
-import { Inspection } from "../models/inspection.model";
+import { Inspection } from "../models/inspection";
+import { Link } from "react-router-dom";
 
-export default function InspectionRow({ inspection }) {
+export default function InspectionCard({ inspection }) {
   return (
     <Grid2 size={4}>
       <Card>
@@ -16,7 +17,12 @@ export default function InspectionRow({ inspection }) {
                 {inspection.postalCode} {inspection.city}
               </span>
             </Stack>
-            <Link href={`/details/${inspection.id}`}>View details</Link>
+            <Link
+              to={`/details/${inspection.id}`}
+              aria-label={`Link to view the details of inspection with id ${inspection.id}`}
+            >
+              View details
+            </Link>
           </Stack>
         </CardContent>
       </Card>
@@ -24,6 +30,6 @@ export default function InspectionRow({ inspection }) {
   );
 }
 
-InspectionRow.propTypes = {
+InspectionCard.propTypes = {
   inspection: PropTypes.instanceOf(Inspection),
 };

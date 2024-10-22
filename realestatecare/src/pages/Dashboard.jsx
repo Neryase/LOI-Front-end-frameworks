@@ -4,9 +4,9 @@ export default function Dashboard() {
   return (
     <>
       <DashboardCard url="/planned" icon="Schedule"></DashboardCard>
-      <DashboardCard url="#" icon="Completed"></DashboardCard>
-      <DashboardCard url="#" icon="KnowledgeBase"></DashboardCard>
-      <DashboardCard url="#" icon="Settings"></DashboardCard>
+      <DashboardCard url="/finished" icon="Completed"></DashboardCard>
+      <DashboardCard url="/knowledgebase" icon="KnowledgeBase"></DashboardCard>
+      <DashboardCard url="/settings" icon="Settings"></DashboardCard>
     </>
   );
 }
