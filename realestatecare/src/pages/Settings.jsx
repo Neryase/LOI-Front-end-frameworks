@@ -9,13 +9,13 @@ import {
   TextField,
 } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useDarkmode } from "../stores/useDarkmode";
+import { useSettings } from "../stores/useSettings";
 import { useNavigate } from "react-router-dom";
 
 export default function Settings() {
   const navigate = useNavigate();
-  const darkmode = useDarkmode((state) => state.darkmode);
-  const updateDarkmode = useDarkmode((state) => state.update);
+  const darkmode = useSettings((state) => state.darkmode);
+  const updateDarkmode = useSettings((state) => state.updateDarkmode);
   const [user, setUser] = useState({
     firstname: "John",
     lastname: "Doe",

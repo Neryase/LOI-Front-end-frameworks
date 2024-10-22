@@ -63,6 +63,10 @@ body:has(main[data-darkmode="true"]) {
   color: white;
 }
 
+body:has(main[data-darkmode="true"]) a {
+  color: white;
+}
+
 a:has(.DashboardCard) {
   box-sizing: border-box;
   display: block;
@@ -156,6 +160,10 @@ footer a:hover svg {
 .field-title {
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.clickable {
+  cursor: pointer;
 }
 
 h3 {

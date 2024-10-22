@@ -15,16 +15,16 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard.jsx";
 import Settings from "./pages/Settings.jsx";
 import KnowledgeBase from "./pages/KnowledgeBase.jsx";
-import ScheduledInspectionsOverview from "./pages/ScheduledInspectionsOverview.jsx";
-import FinishedInspectionsOverview from "./pages/FinishedInspectionsOverview.jsx";
+import ScheduledInspectionsOverview from "./pages/ScheduledInspections.jsx";
+import FinishedInspectionsOverview from "./pages/FinishedInspections.jsx";
 import InspectionsDetails from "./pages/InspectionsDetails.jsx";
 import Login from "./pages/Login.jsx";
 import PrivateRoute from "./components/PrivateRoute.jsx";
-import { useDarkmode } from "./stores/useDarkmode.js";
+import { useSettings } from "./stores/useSettings.js";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 export default function App() {
-  const darkmode = useDarkmode((state) => state.darkmode);
+  const darkmode = useSettings((state) => state.darkmode);
 
   // create a darkTheme function to handle dark theme using createTheme
   const darkTheme = createTheme({

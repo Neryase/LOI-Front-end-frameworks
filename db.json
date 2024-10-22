@@ -67,24 +67,131 @@
   ],
   "objectives": [
     {
+      "id": "5",
       "type": "damage",
-      "inspectionId": "12345"
+      "inspectionId": "12345",
+      "status": "open",
+      "location": "Kitchen",
+      "typeOfDamage": "moedwillig",
+      "description": "some lengthy description",
+      "executedBy": "huurder",
+      "action": "laten keuren",
+      "reportedSituation": "https://test.nl"
     },
     {
+      "id": "5",
       "type": "damage",
-      "inspectionId": "12346"
+      "inspectionId": "67890",
+      "status": "open",
+      "location": "Kitchen",
+      "typeOfDamage": "moedwillig",
+      "description": "some lengthy description",
+      "executedBy": "huurder",
+      "action": "laten keuren",
+      "reportedSituation": "https://test.nl"
     },
     {
-      "type": "damage",
-      "inspectionId": "12347"
+      "id": "2",
+      "type": "maintenance",
+      "inspectionId": "67890",
+      "status": "open",
+      "location": "Garage",
+      "description": "some lengthy description",
+      "typeOfMaintenance": "schilderwerk",
+      "immediateActionRequired": "no",
+      "costs": "500-1.500"
     },
     {
-      "type": "damage",
-      "inspectionId": "12347"
+      "id": "2",
+      "type": "maintenance",
+      "inspectionId": "12346",
+      "status": "closed",
+      "location": "Garage",
+      "description": "some lengthy description",
+      "typeOfMaintenance": "schilderwerk",
+      "immediateActionRequired": "no",
+      "costs": "500-1.500"
     },
     {
+      "id": "3",
+      "type": "installation",
+      "inspectionId": "12347",
+      "status": "closed",
+      "location": "Living room",
+      "description": "some lengthy description",
+      "typeOfInstallation": "koeling",
+      "testProcedure": "https://test.nl",
+      "approved": "yes",
+      "reportedMalfunctions": "A/C broken"
+    },
+    {
+      "id": "3",
+      "type": "installation",
+      "inspectionId": "56789",
+      "status": "open",
+      "location": "Living room",
+      "description": "some lengthy description",
+      "typeOfInstallation": "koeling",
+      "testProcedure": "https://test.nl",
+      "approved": "yes",
+      "reportedMalfunctions": "A/C broken"
+    },
+    {
+      "id": "4",
       "type": "damage",
-      "inspectionId": "12348"
+      "inspectionId": "12347",
+      "status": "closed",
+      "location": "Bathroom",
+      "description": "some lengthy description",
+      "typeOfDamage": "moedwillig",
+      "damageDate": "2024-09-01T00:00:00+00.00",
+      "newDamage": "no",
+      "immediateActionRequired": "yes"
+    },
+    {
+      "id": "4",
+      "type": "damage",
+      "inspectionId": "45678",
+      "status": "open",
+      "location": "Bathroom",
+      "description": "some lengthy description",
+      "typeOfDamage": "moedwillig",
+      "damageDate": "2024-09-01T00:00:00+00.00",
+      "newDamage": "no",
+      "immediateActionRequired": "yes"
+    },
+    {
+      "id": "5",
+      "type": "modification",
+      "inspectionId": "12348",
+      "status": "closed",
+      "location": "Bedroom 1",
+      "description": "some lengthy description",
+      "executedBy": "huurder",
+      "action": "laten keuren",
+      "reportedSituation": "https://test.nl"
+    },
+    {
+      "id": "5",
+      "type": "modification",
+      "inspectionId": "67890",
+      "status": "open",
+      "location": "Bedroom 1",
+      "description": "some lengthy description",
+      "executedBy": "huurder",
+      "action": "laten keuren",
+      "reportedSituation": "https://test.nl"
+    },
+    {
+      "id": "5",
+      "type": "modification",
+      "inspectionId": "23456",
+      "status": "open",
+      "location": "Bedroom 1",
+      "description": "some lengthy description",
+      "executedBy": "huurder",
+      "action": "laten keuren",
+      "reportedSituation": "https://test.nl"
     }
   ]
 }

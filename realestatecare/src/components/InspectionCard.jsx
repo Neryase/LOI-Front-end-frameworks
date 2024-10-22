@@ -17,7 +17,12 @@ export default function InspectionCard({ inspection }) {
                 {inspection.postalCode} {inspection.city}
               </span>
             </Stack>
-            <Link to={`/details/${inspection.id}`}>View details</Link>
+            <Link
+              to={`/details/${inspection.id}`}
+              aria-label={`Link to view the details of inspection with id ${inspection.id}`}
+            >
+              View details
+            </Link>
           </Stack>
         </CardContent>
       </Card>

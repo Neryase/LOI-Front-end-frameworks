@@ -1,7 +1,10 @@
 export class Objective {
   constructor(obj) {
     this.id = obj.id;
-    this.reportId = obj.reportId;
+    this.status = obj.status;
+    this.inspectionId = obj.inspectionId;
+    this.location = obj.location;
+    this.description = obj.description;
   }
 }
 
@@ -33,7 +36,7 @@ export class InstallationObjective extends Objective {
     this.typeOfInstallation = obj.typeOfInstallation; // selection: koeling, verwarming, luchtverversing, elektra, beveiliging
     this.testProcedure = obj.testProcedure; // link
     this.approved = obj.approved; // boolean
-    this.reportedMalfuctions = obj.reportedMalfuctions; // text
+    this.reportedMalfunctions = obj.reportedMalfunctions; // text
   }
 }
 
